@@ -1,9 +1,8 @@
 import streamlit as st
 from langchain import PromptTemplate
 from langchain.llms import OpenAI
+st.set_page_config(page_title="Globalize Email", page_icon="robot: ")
 import os
-os.environ["OPENAI_API_KEY"] = "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"
-
 template = """
     Below is an email that may be poorly worded. 
     Your goal is to:
@@ -38,7 +37,7 @@ def load_LLM():
     return llm
 
 llm=load_LLM()
-st.set_page_config(page_title="Globalize Email", page_icon="robot: ")
+
 st.header("Globalize Text")
 
 
